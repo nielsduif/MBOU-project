@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MuziekSpeler : MonoBehaviour
 {
-	public float musicVolume = 1f;
-
     static MuziekSpeler instance = null;
 
     void Start()
@@ -19,12 +17,6 @@ public class MuziekSpeler : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);//als er al een nummer afspeelt wordt het niet verwijderd
         }
-
-    }
-
-    void update()
-    {
-		AudioListener.volume = musicVolume;
     }
 
     void Awake()
@@ -40,8 +32,8 @@ public class MuziekSpeler : MonoBehaviour
         }
     }
 
-    public void SetVolume(float vol)
+    void update()
     {
-        musicVolume = vol;
+        //AudioListener.volume = PlayerPrefs.GetFloat("volume");
     }
 }

@@ -6,10 +6,10 @@ public class camerarotation : MonoBehaviour {
 
     public Transform target;
     public float smoothTime;
-    public float speed = 3.0f;
+    public float speed;
 
-    public float followDistance = 10f;
-    public float verticalBuffer = 1.5f;
+    public float followDistance = 2f;
+    public float verticalBuffer = -5f;
     public float horizontalBuffer = 0f;
 
     private Vector3 velocity = Vector3.zero;
