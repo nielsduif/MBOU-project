@@ -9,7 +9,7 @@ Daarna download je Github Desktop: https://desktop.github.com/
 Log hier in met jouw account die je ook aan mij hebt doorgegeven.
 Zodra je bent ingelogged klik je op File.
 Klik vervolgens op Clone repository.
-Ga naar het URL tabje en vul bij URL deze link in: https://github.com/nielsduif/project.git
+Ga naar het URL tabje en vul bij URL deze link in: https://github.com/nielsduif/project.git 
 Bij je local path vul je zelf een locatie in waar je het project op je PC wilt opslaan.
 
 Klik op clone en als het goed is pulled de desktop nu het project naar je computer toe.
