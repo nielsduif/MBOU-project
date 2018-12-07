@@ -30,11 +30,11 @@ public class UIController : MonoBehaviour {
         }
 
        // UIHealth[0].value = GameManager.Instance.DolfijnHP / 100;
-        UIHealth[1].value = GameManager.Instance.KoraalHP;
+        //UIHealth[1].value = GameManager.Instance.KoraalHP;
 
-        UIElementsText[0].text = "Time: " + string.Format("{0:0}", GameManager.Instance.TimeLimit) ;
+        //UIElementsText[0].text = "Time: " + string.Format("{0:0}", GameManager.Instance.TimeLimit) ;
         //UIElementsText[1].text = /*Hoeveelheid afval later toevoegen +*/  "0/3"  ;
-        UIElementsText[2].text = "" + GameManager.Instance.Score;
+        //UIElementsText[2].text = "" + GameManager.Instance.Score;
     }
     public void ToggleUI()
     {

@@ -5,19 +5,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     private static GameManager _instance;
-    public static GameManager Instance
-    {
-        get
-        {
-            if(_instance == null)
-            {
-                GameObject go = new GameObject("GameManager");
-                go.AddComponent<GameManager>();
-                go.AddComponent<DataInserter>();
-            }
-            return _instance;
-        }
-    }
+    // public static GameManager Instance
+    // {
+    //     get
+    //     {
+    //         if(_instance == null)
+    //         {
+    //             GameObject go = new GameObject("GameManager");
+    //             go.AddComponent<GameManager>();
+    //             go.AddComponent<DataInserter>();
+    //         }
+    //         return _instance;
+    //     }
+    // }
 
     public float Score { get; set; }
     public float TimeLimit { get; set; }
@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour {
     bool Win = false;
     LevelManager levelmanager;
     UIController uiController;
-    PlayerHealth playerHealth;
-    DataInserter dataInserter;
+    // PlayerHealth playerHealth;
+    // DataInserter dataInserter;
 
     public void Victory()
     {
@@ -42,14 +42,14 @@ public class GameManager : MonoBehaviour {
 
     void Update()
     {
-        DolfijnHP = playerHealth.currentHealth;
+        // DolfijnHP = playerHealth.currentHealth;
         if (DolfijnHP <= 0 || KoraalHP <= 0)
         {
             if (Lost)
             {
                 Lose();
                 Lost = true;
-                dataInserter.ActivateInstert();
+                // dataInserter.ActivateInstert();
 
             }
         }
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour {
             {
                 Victory();
                 Win = true;
-                dataInserter.ActivateInstert();
+                // dataInserter.ActivateInstert();
             }
         }
         TimeLimit  -= Time.deltaTime;
@@ -75,8 +75,8 @@ public class GameManager : MonoBehaviour {
     {
         Time.timeScale = 1;
         TimeLimit = 180f;
-        dataInserter = GameObject.FindObjectOfType<DataInserter>();
-        playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
+        // dataInserter = GameObject.FindObjectOfType<DataInserter>();
+        // playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
         uiController = GameObject.FindObjectOfType<UIController>();
         levelmanager = GameObject.FindObjectOfType<LevelManager>();
     }
