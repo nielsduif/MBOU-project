@@ -25,7 +25,8 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void Update(){
+    public void Update()
+    {
         volumebar.value = PlayerPrefs.GetFloat("volume");
     }
 
