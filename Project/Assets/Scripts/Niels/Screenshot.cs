@@ -8,6 +8,6 @@ public class Screenshot : MonoBehaviour
 {
     public void Screen()
     {
-        Application.CaptureScreenshot("eric", );
+        //Application.CaptureScreenshot("eric");
     }
 }
