@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bcaa17a7a1c790547b9bf84e7ac2c068
+guid: ad41a48775631a14cbeaf6621234ced5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -138,7 +138,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: RollerBallWhite
-    second: {fileID: 2100000, guid: ab9d59de06288264491ca7ef1ff7ad75, type: 2}
+    second: {fileID: 2100000, guid: 7c2c91e74a4320b439162a4af39c7365, type: 2}
   materials:
     importMaterials: 1
     materialName: 1

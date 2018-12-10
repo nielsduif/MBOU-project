@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03fc30373ff747f4b8517b0389e888cb
+guid: 1f1bb14727c8059409daa98d776c921b
 TextureImporter:
   fileIDToRecycleName:
     21300000: SliderBackground
@@ -76,7 +76,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0ed36dd580a441041816dab4c68d2819
+    spriteID: b63f2073f6d4db54bbfd6c89c2cf089a
     vertices: []
     indices: 
     edges: []
