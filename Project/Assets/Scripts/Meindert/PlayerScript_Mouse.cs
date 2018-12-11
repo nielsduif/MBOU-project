@@ -24,6 +24,8 @@ public class PlayerScript_Mouse : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetFloat("sensitivityx", 2f);
+        PlayerPrefs.SetFloat("sensitivityy", 2f);
         targetDirection = transform.localRotation.eulerAngles;
 
         if (characterBody)
