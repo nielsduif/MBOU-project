@@ -2387,6 +2387,11 @@ Prefab:
       propertyPath: m_Size.z
       value: 0.9324856
       objectReference: {fileID: 0}
+    - target: {fileID: 54959870400996206, guid: 8e6959fe89cd6574ca7f2d6c986fd0a1,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e6959fe89cd6574ca7f2d6c986fd0a1, type: 2}
   m_IsPrefabAsset: 0
@@ -3475,8 +3480,8 @@ Transform:
   - {fileID: 355721633}
   - {fileID: 1712586057}
   - {fileID: 1071219868}
-  - {fileID: 1754854996}
   - {fileID: 1297253083}
+  - {fileID: 1754854996}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4463,7 +4468,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1624637122221848, guid: 968450528055db64b9125ad37b5249a0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 968450528055db64b9125ad37b5249a0, type: 2}
