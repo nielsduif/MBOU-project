@@ -22,11 +22,15 @@ public class Pause : MonoBehaviour
         {
             pauseCanvas.SetActive(true);
             Time.timeScale = 0;
+            PlayerPrefs.SetFloat("sensitivityx", 0f);
+            PlayerPrefs.SetFloat("sensitivityy", 0f);
         }
         else
         {
             pauseCanvas.SetActive(false);
             Time.timeScale = 1;
+             PlayerPrefs.SetFloat("sensitivityx", 2f);
+            PlayerPrefs.SetFloat("sensitivityy", 2f);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
