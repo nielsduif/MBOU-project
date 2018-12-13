@@ -8,20 +8,26 @@ ModelImporter:
     100004: Curve.001
     100006: Lamp
     100008: //RootNode
+    100010: Curve.002
     400000: Camera
     400002: Curve
     400004: Curve.001
     400006: Lamp
     400008: //RootNode
+    400010: Curve.002
     2000000: Camera
     2100000: SVGMat.002
     2100002: SVGMat.001
+    2100004: SVGMat.003
     2300000: Curve
     2300002: Curve.001
+    2300004: Curve.002
     3300000: Curve
     3300002: Curve.001
+    3300004: Curve.002
     4300000: Curve.001
     4300002: Curve
+    4300004: Curve.002
     10800000: Lamp
   externalObjects: {}
   materials:
