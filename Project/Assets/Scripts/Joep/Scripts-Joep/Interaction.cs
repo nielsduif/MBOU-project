@@ -4,10 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour {
+
     public Transform player;
     public Text UItext;
     public float range;
     public string Message;
+    public GameObject SchermCanvas;
+    public GameObject UI;
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -30,6 +35,8 @@ public class Interaction : MonoBehaviour {
 	}
     public void DOTHIS()
     {
-        print("DOTHISCUNT");
+        //print("DOTHISCUNT");
+        UI.SetActive(false);
+        SchermCanvas.SetActive(true);
     }
 }
