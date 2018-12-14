@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class PlayerScript_Mouse : MonoBehaviour
 {
+    public bool enter;
+    public AudioClip Laser_Shoot52;
+    private AudioSource source;
+
+
     Vector2 _mouseAbsolute;
     Vector2 _smoothMouse;
     [Space(20)]
@@ -24,12 +29,12 @@ public class PlayerScript_Mouse : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetFloat("sensitivityx", 2f);
-        PlayerPrefs.SetFloat("sensitivityy", 2f);
         targetDirection = transform.localRotation.eulerAngles;
 
         if (characterBody)
             targetCharacterDirection = characterBody.transform.localRotation.eulerAngles;
+        enter = false;
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -41,7 +46,7 @@ public class PlayerScript_Mouse : MonoBehaviour
 
         var mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
 
-        mouseDelta = Vector2.Scale(mouseDelta, new Vector2(PlayerPrefs.GetFloat("sensitivityx") * smoothing.x, PlayerPrefs.GetFloat("sensitivityy") * smoothing.y));
+        mouseDelta = Vector2.Scale(mouseDelta, new Vector2(sensitivity.x * smoothing.x, sensitivity.y * smoothing.y));
 
         _smoothMouse.x = Mathf.Lerp(_smoothMouse.x, mouseDelta.x, 1f / smoothing.x);
         _smoothMouse.y = Mathf.Lerp(_smoothMouse.y, mouseDelta.y, 1f / smoothing.y);
@@ -86,6 +91,38 @@ public class PlayerScript_Mouse : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Zone1")
+        {
+            enter = true;
+            source.PlayOneShot(Laser_Shoot52);
+            Debug.Log("Entered");
+        }
+
+        if (other.gameObject.tag == "Zone2")
+        {
+            enter = true;
+            source.PlayOneShot(Laser_Shoot52);
+            Debug.Log("Entered");
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Zone1")
+        {
+            enter = false;
+            Debug.Log("Exited");
+        }
+
+        if (other.gameObject.tag == "Zone2")
+        {
+            enter = false;
+            Debug.Log("Exited");
         }
     }
 }
