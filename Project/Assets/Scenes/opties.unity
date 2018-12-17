@@ -155,6 +155,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6a786ccb41b277428e7a8fde9f6fb0b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &24765207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114928890294302468, guid: d6a786ccb41b277428e7a8fde9f6fb0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 24765206}
+  m_Script: {fileID: 11500000, guid: 329cc5af119218340849d0d35c069a0e, type: 3}
 --- !u!1 &207241370
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,9 +734,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Terug
-        m_Mode: 1
+      - m_Target: {fileID: 24765207}
+        m_MethodName: LaadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
