@@ -9,7 +9,6 @@ public class Pause : MonoBehaviour
     public GameObject pauseCanvas;
     public GameObject pauseCanvasKlein;
     public GameObject optionsCanvas;
-    public bool menutoggle;
 
     void Start()
     {
@@ -23,35 +22,19 @@ public class Pause : MonoBehaviour
         {
             pauseCanvas.SetActive(true);
             Time.timeScale = 0;
-            menutoggle = true;
-            PlayerPrefs.SetInt("menu", 1);
-            if (PlayerPrefs.GetInt("menu") == 1)
-            {
-                PlayerPrefs.SetInt("sensx", 0);
-                PlayerPrefs.SetInt("sensy", 0);
-            }
+            PlayerPrefs.SetFloat("sensitivityx", 0f);
+            PlayerPrefs.SetFloat("sensitivityy", 0f);
         }
         else
         {
             pauseCanvas.SetActive(false);
             Time.timeScale = 1;
-            if (PlayerPrefs.GetInt("menu") == 0)
-            {
-                PlayerPrefs.SetInt("sensx", 2);
-                PlayerPrefs.SetInt("sensy", 2);
-            }
+             PlayerPrefs.SetFloat("sensitivityx", 2f);
+            PlayerPrefs.SetFloat("sensitivityy", 2f);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = !isPaused;
-            if (menutoggle == true)
-            {
-                PlayerPrefs.SetInt("menu", 0);
-            }
-            if (menutoggle == false)
-            {
-                PlayerPrefs.SetInt("menu", 1);
-            }
         }
     }
 

@@ -46,9 +46,7 @@ public class PlayerScript_Mouse : MonoBehaviour
 
         var mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
 
-        //mouseDelta = Vector2.Scale(mouseDelta, new Vector2(sensitivity.x * smoothing.x, sensitivity.y * smoothing.y));
-        mouseDelta = Vector2.Scale(mouseDelta, new Vector2(PlayerPrefs.GetInt("sensx") * smoothing.x, PlayerPrefs.GetInt("sensy") * smoothing.y));
-
+        mouseDelta = Vector2.Scale(mouseDelta, new Vector2(sensitivity.x * smoothing.x, sensitivity.y * smoothing.y));
 
         _smoothMouse.x = Mathf.Lerp(_smoothMouse.x, mouseDelta.x, 1f / smoothing.x);
         _smoothMouse.y = Mathf.Lerp(_smoothMouse.y, mouseDelta.y, 1f / smoothing.y);
