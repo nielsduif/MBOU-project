@@ -26,11 +26,13 @@ public class Interaction : MonoBehaviour
     {
         if (Vector3.Distance(player.position, transform.position) <= range)
         {
-            UItext.text = "" + Message;
+            UItext.text = Message;
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DOTHIS();
                 UItext.text = "";
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
         }
         else
@@ -42,10 +44,9 @@ public class Interaction : MonoBehaviour
     {
         //print("DOTHISCUNT");
         //UI.SetActive(false);
+
         PlayerPrefs.SetString("onderwijsscherm", scherm);
         PlayerPrefs.SetInt("menu", 1);
-        PlayerPrefs.SetInt("sensx", 0);
-        PlayerPrefs.SetInt("sensy", 0);
         SchermCanvas.SetActive(true);
     }
 }
