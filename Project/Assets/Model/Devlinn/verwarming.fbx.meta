@@ -1,39 +1,26 @@
 fileFormatVersion: 2
 guid: f6871249eb0608c4aa1c354f638defde
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: node_id4
     100002: node_id6
     100004: node_id7
     100006: //RootNode
-    100008: node_id4_MeshPart0
-    100010: node_id4_MeshPart1
-    100012: node_id4_MeshPart2
     400000: node_id4
     400002: node_id6
     400004: node_id7
     400006: //RootNode
-    400008: node_id4_MeshPart0
-    400010: node_id4_MeshPart1
-    400012: node_id4_MeshPart2
     2100000: Material_51
     2300000: node_id4
-    2300002: node_id4_MeshPart0
-    2300004: node_id4_MeshPart1
-    2300006: node_id4_MeshPart2
     3300000: node_id4
-    3300002: node_id4_MeshPart0
-    3300004: node_id4_MeshPart1
-    3300006: node_id4_MeshPart2
     4300000: node_id4
-    4300002: node_id4_MeshPart0
-    4300004: node_id4_MeshPart1
-    4300006: node_id4_MeshPart2
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -46,6 +33,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -70,11 +59,15 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -94,7 +87,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
