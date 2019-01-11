@@ -91,7 +91,5 @@ public class SchermScript : MonoBehaviour
     {
         scherm.SetActive(false);
         PlayerPrefs.SetInt("menu", 0);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 }
