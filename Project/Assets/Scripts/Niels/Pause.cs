@@ -21,6 +21,9 @@ public class Pause : MonoBehaviour
     {//als de esc key wordt ingedrukt komt het canvas pause aan te staan
         if (isPaused)
         {
+            
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             pauseCanvas.SetActive(true);
             Time.timeScale = 0;
             menutoggle = true;
@@ -33,6 +36,8 @@ public class Pause : MonoBehaviour
         }
         else
         {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             pauseCanvas.SetActive(false);
             Time.timeScale = 1;
             if (PlayerPrefs.GetInt("menu") == 0)
