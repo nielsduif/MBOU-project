@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Uitleg : MonoBehaviour
 {
@@ -14,12 +15,12 @@ public class Uitleg : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        PlayerPrefs.SetInt("sensx", 0);
-        PlayerPrefs.SetInt("sensy", 0);
+        GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = false;
         togglemenu = true;
-        progress = 0;
+        //progress = 0;
         PlayerPrefs.SetInt("menu", 1);
         uitleg.text = "Welkom in deze game. Dit spel gaat je een basic uitleg geven over het gebruik van OnderwijsOnline.";
+        buttontext.text = "Volgende";
     }
 
     // Update is called once per frame
@@ -49,5 +50,6 @@ public class Uitleg : MonoBehaviour
     public void Klik()
     {
         progress++;
+        Debug.Log(progress);
     }
 }
