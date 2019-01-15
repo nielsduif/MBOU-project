@@ -21,6 +21,7 @@ public class CollisionQuiz : MonoBehaviour {
     public int points;
     public Text point;
     public Text currentQuestionNumber;
+    
     // Use this for initialization
     void Start () {
 		

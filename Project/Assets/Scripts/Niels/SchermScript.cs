@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
+
 
 public class SchermScript : MonoBehaviour
 {
@@ -93,5 +95,6 @@ public class SchermScript : MonoBehaviour
         PlayerPrefs.SetInt("menu", 0);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        //GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
     }
 }

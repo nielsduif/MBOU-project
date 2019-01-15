@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
+
 
 public class Interaction : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class Interaction : MonoBehaviour
     public string Message;
     public GameObject SchermCanvas;
     public string scherm;
+    //public GameObject fpscontroller;
     //public GameObject UI;
 
 
@@ -31,8 +34,8 @@ public class Interaction : MonoBehaviour
             {
                 DOTHIS();
                 UItext.text = "";
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
+                //fpscontroller.GetComponent<FirstPersonController>().enabled = false;
+                GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = false;
             }
         }
         else
@@ -48,5 +51,7 @@ public class Interaction : MonoBehaviour
         PlayerPrefs.SetString("onderwijsscherm", scherm);
         PlayerPrefs.SetInt("menu", 1);
         SchermCanvas.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

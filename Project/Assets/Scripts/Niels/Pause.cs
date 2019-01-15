@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Pause : MonoBehaviour
 {
-
     public bool isPaused;
     public GameObject pauseCanvas;
     public GameObject pauseCanvasKlein;
@@ -21,31 +21,19 @@ public class Pause : MonoBehaviour
     {//als de esc key wordt ingedrukt komt het canvas pause aan te staan
         if (isPaused)
         {
-            
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = false;
             pauseCanvas.SetActive(true);
             Time.timeScale = 0;
             menutoggle = true;
             PlayerPrefs.SetInt("menu", 1);
-            if (PlayerPrefs.GetInt("menu") == 1)
-            {
-                PlayerPrefs.SetInt("sensx", 0);
-                PlayerPrefs.SetInt("sensy", 0);
-            }
         }
-        else
+        if (!isPaused && PlayerPrefs.GetInt("menu") == 0)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = true;
             pauseCanvas.SetActive(false);
             Time.timeScale = 1;
-            if (PlayerPrefs.GetInt("menu") == 0)
-            {
-                PlayerPrefs.SetInt("sensx", 2);
-                PlayerPrefs.SetInt("sensy", 2);
-            }
         }
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = !isPaused;
