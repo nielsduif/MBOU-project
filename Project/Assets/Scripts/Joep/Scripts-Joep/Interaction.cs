@@ -38,10 +38,11 @@ public class Interaction : MonoBehaviour
                 GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = false;
             }
         }
-        else
+        if (Vector3.Distance(player.position, transform.position) >= range)
         {
             UItext.text = "";
         }
+
     }
     public void DOTHIS()
     {

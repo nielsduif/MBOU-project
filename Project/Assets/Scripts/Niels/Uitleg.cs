@@ -11,6 +11,8 @@ public class Uitleg : MonoBehaviour
     public Text buttontext;
     public GameObject canvasuitleg;
     public bool togglemenu;
+    public GameObject DashboardSound;
+    public GameObject DashboardPanel;
 
     // Use this for initialization
     void Start()
@@ -38,6 +40,7 @@ public class Uitleg : MonoBehaviour
         }
         if (progress == 3)
         {
+            //progress++;
             canvasuitleg.SetActive(false);
             if (togglemenu == true)
             {
@@ -45,11 +48,25 @@ public class Uitleg : MonoBehaviour
                 togglemenu = false;
             }
         }
+        if (progress == 4)
+        {
+            canvasuitleg.SetActive(true);
+            GameObject.Find("FPSController").GetComponent<FirstPersonController>().enabled = false;
+            uitleg.text = "In dit scherm kan je selecteren welke onderdelen je wilt leren";
+            buttontext.text = "Volgende";
+        }
     }
 
     public void Klik()
     {
         progress++;
-        Debug.Log(progress);
+        //Debug.Log(progress);
+    }
+
+    public void KlikDashboard()
+    {
+        progress++;
+        DashboardSound.SetActive(true);
+        DashboardPanel.SetActive(false);
     }
 }
