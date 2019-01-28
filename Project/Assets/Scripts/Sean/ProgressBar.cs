@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour
 {
-
     public float CurrentQuestions; // { get; set; }
     public float MaxQuestions; // { get; set; }
     public Slider Progress;
